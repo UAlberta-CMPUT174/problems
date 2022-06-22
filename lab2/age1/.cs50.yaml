@@ -1,2 +1,2 @@
 check50:
-  files: *submit50_files
+  files: age1.py
