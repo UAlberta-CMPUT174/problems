@@ -1,2 +1,1 @@
-check50:
-  checks: age1.py
+check50: true
