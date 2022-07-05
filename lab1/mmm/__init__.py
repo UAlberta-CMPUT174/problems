@@ -34,5 +34,5 @@ def test_empty():
         cs50.run(f"python3 {SCRIPT_NAME}") \
             .stdin("") \
             .stdout()
-    if not any(output.rstrip() == correct_output for correct_output in ["Mmm... ", "Mmm...", "Mmm... !"] ):
-        raise cs50.Failure(f"Expected 'Mmm... ' or 'Mmm...' or 'Mmm... !', Got {output}")
+    if not any(output.rstrip() == correct_output for correct_output in ["Mmm...", "Mmm... !"] ):
+        raise cs50.Failure(f"Expected 'Mmm...' or 'Mmm... !', Got {output}")
