@@ -33,8 +33,8 @@ def test_one():
 def test_two():
     """Test Passed For Test Two"""
     cs50.run(f"python3 {SCRIPT_NAME}") \
-        .stdin(unreadable(8, 17, "Life on Fast Lane")) \
-        .stdout(unreadable(8, 17, "Life on Fast Lane")) \
+        .stdin("S8_E17_Life on Fast Lane") \
+        .stdout("Season 8, Episode 17: Life on Fast Lane (The Simpsons)") \
         .exit()
 
 
