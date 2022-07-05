@@ -11,7 +11,7 @@ def unreadable(season, episode, name):
 
 def readable(season, episode, name):
     """Given a season, episode, and name, returns the readable formatted string"""
-    return f"Season {season}, Episode {episode}: {name} (The Simpsons)\n"
+    return f"Season {season}, Episode {episode}: {name} (The Simpsons)"
 
 
 @cs50.check()
@@ -27,7 +27,7 @@ def test_one():
         cs50.run(f"python3 {SCRIPT_NAME}") \
             .stdin(unreadable(18, 7, "Fatzcarraldo")) \
             .stdout()
-    if readable(18, 7, "Fatzcarraldo") == output.rstrip():
+    if readable(18, 7, "Fatzcarraldo") != output.rstrip():
         raise cs50.Mismatch(readable(18, 7, "Fatzcarraldo"), output.rstrip())
 
 
