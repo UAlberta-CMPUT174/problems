@@ -1,9 +1,1 @@
-check50:
-  checks:
-    chalkboard:
-      - run: python3 chalkboard.py
-        stdin: 
-          - I WILL NOT ENCOURAGE OTHERS TO FLY
-          - 3
-        stdout: I WILL NOT ENCOURAGE OTHERS TO FLY I WILL NOT ENCOURAGE OTHERS TO FLY I WILL NOT ENCOURAGE OTHERS TO FLY 
-        exit: 0
+check50: true
