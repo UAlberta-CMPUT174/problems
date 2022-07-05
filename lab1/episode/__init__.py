@@ -11,7 +11,7 @@ def unreadable(season, episode, name):
 
 def readable(season, episode, name):
     """Given a season, episode, and name, returns the readable formatted string"""
-    return f"Season {season}, Episode {episode}: {name} (The Simpsons)"
+    return f"Season {season}, Episode {episode}: {name} (The Simpsons)\n"
 
 
 @cs50.check()
@@ -33,8 +33,8 @@ def test_one():
 def test_two():
     """Test Passed For Test Two"""
     cs50.run(f"python3 {SCRIPT_NAME}") \
-        .stdin("S8_E17_Life on Fast Lane") \
-        .stdout("Season 8, Episode 17: Life on Fast Lane (The Simpsons)") \
+        .stdin(unreadable(8, 17, "Life on Fast Lane")) \
+        .stdout(readable(8, 17, "Life on Fast Lane")) \
         .exit()
 
 
