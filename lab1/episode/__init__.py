@@ -23,10 +23,12 @@ def exists():
 @cs50.check(exists)
 def test_one():
     """Test Passed For Test One"""
-    cs50.run(f"python3 {SCRIPT_NAME}") \
-        .stdin(unreadable(18, 7, "Fatzcarraldo")) \
-        .stdout(readable(18, 7, "Fatzcarraldo")) \
-        .exit()
+    output = \
+        cs50.run(f"python3 {SCRIPT_NAME}") \
+            .stdin(unreadable(18, 7, "Fatzcarraldo")) \
+            .stdout()
+    if readable(18, 7, "Fatzcarraldo") != output.rstrip():
+        raise cs50.Mismatch(readable(18, 7, "Fatzcarraldo"), output.rstrip())
 
 
 @cs50.check(exists)
