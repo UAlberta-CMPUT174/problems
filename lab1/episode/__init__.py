@@ -26,7 +26,7 @@ def test_one():
     output = \
         cs50.run(f"python3 {SCRIPT_NAME}") \
             .stdin(unreadable(18, 7, "Fatzcarraldo")) \
-            .stdout(readable(18, 7, "Fatzcarraldo"))
+            .stdout(readable(18, 7, "Fatzcarraldo")) \
             .exit()
 
 
