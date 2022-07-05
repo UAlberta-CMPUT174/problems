@@ -34,7 +34,7 @@ def test_two():
     """Test Passed For Test Two"""
     cs50.run(f"python3 {SCRIPT_NAME}") \
         .stdin(unreadable(8, 17, "Life on Fast Lane")) \
-        .stdout(readable(8, 17, "Life on Fast Lane")) \
+        .stdout(unreadable(8, 17, "Life on Fast Lane")) \
         .exit()
 
 
