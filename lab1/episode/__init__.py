@@ -26,9 +26,8 @@ def test_one():
     output = \
         cs50.run(f"python3 {SCRIPT_NAME}") \
             .stdin(unreadable(18, 7, "Fatzcarraldo")) \
-            .stdout()
-    if readable(18, 7, "Fatzcarraldo") != output.rstrip():
-        raise cs50.Mismatch(readable(18, 7, "Fatzcarraldo"), output.rstrip())
+            .stdout(readable(18, 7, "Fatzcarraldo"))
+            .exit()
 
 
 @cs50.check(exists)
