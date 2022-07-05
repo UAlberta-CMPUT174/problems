@@ -15,5 +15,5 @@ def test_one():
     cs50.run(f"python3 {SCRIPT_NAME}") \
         .stdin("Garlic gum is not funny.") \
         .stdin("3") \
-        .stdout("Garlic gum is not funny. Garlic gum is not funny. Garlic gum is not funny. ") \
+        .stdout("Garlic gum is not funny. Garlic gum is not funny. Garlic gum is not funny.") \
         .exit()
