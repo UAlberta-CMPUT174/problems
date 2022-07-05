@@ -26,17 +26,20 @@ def test_one():
     output = \
         cs50.run(f"python3 {SCRIPT_NAME}") \
             .stdin(unreadable(18, 7, "Fatzcarraldo")) \
-            .stdout(readable(18, 7, "Fatzcarraldo")) \
-            .exit()
+            .stdout()
+    if readable(18, 7, "Fatzcarraldo") != output.rstrip():
+        raise cs50.Mismatch(readable(18, 7, "Fatzcarraldo"), output.rstrip())
 
 
 @cs50.check(exists)
 def test_two():
     """Test Passed For Test Two"""
-    cs50.run(f"python3 {SCRIPT_NAME}") \
-        .stdin(unreadable(8, 17, "Life on Fast Lane")) \
-        .stdout(readable(8, 17, "Life on Fast Lane")) \
-        .exit()
+    output = \
+        cs50.run(f"python3 {SCRIPT_NAME}") \
+            .stdin(unreadable(8, 17, "Life on Fast Lane")) \
+            .stdout()
+    if readable(8, 17, "Life on Fast Lane") != output.rstrip():
+        raise cs50.Mismatch(readable(8, 17, "Life on Fast Lane"), output.rstrip())
 
 
 @cs50.check(exists)
