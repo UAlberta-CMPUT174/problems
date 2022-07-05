@@ -33,7 +33,6 @@ def test_empty():
     output = \
         cs50.run(f"python3 {SCRIPT_NAME}") \
             .stdin("0") \
-            .stdout("0 degrees in Canada would be 32 degrees in Springfield. D'oh!") \
-            .exit()
+            .stdout()
     if not any(output == correct_output for correct_output in ["Mmm... ", "Mmm..."] ):
         raise cs50.Failure(f"Expected 'Mmm... ' or 'Mmm...', Got {output}")
