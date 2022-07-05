@@ -11,7 +11,7 @@ def exists():
 
 @cs50.check(exists)
 def test_garlic():
-    """Test Passed For Negative Input"""
+    """Test Passed For 'Garlic gum is not funny.'"""
     cs50.run(f"python3 {SCRIPT_NAME}") \
         .stdin("Garlic gum is not funny.") \
         .stdin("3") \
@@ -20,8 +20,8 @@ def test_garlic():
 
 
 @cs50.check(exists)
-def test_paint():
-    """Test Passed For Negative Input"""
+def test_car():
+    """Test Passed For 'I will not drive the principal's car.'"""
     cs50.run(f"python3 {SCRIPT_NAME}") \
         .stdin("I will not drive the principal's car.") \
         .stdin("1") \
@@ -31,7 +31,7 @@ def test_paint():
 
 @cs50.check(exists)
 def test_attitude():
-    """Test Passed For Negative Input"""
+    """Test Passed For 'I will not get very far with this attitude.'"""
     cs50.run(f"python3 {SCRIPT_NAME}") \
         .stdin("I will not get very far with this attitude.") \
         .stdin("4") \
