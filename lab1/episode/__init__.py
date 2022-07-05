@@ -45,7 +45,9 @@ def test_two():
 @cs50.check(exists)
 def test_three():
     """Test Passed For Test Three"""
-    cs50.run(f"python3 {SCRIPT_NAME}") \
-        .stdin(unreadable(4, 9, "Last Exit to Springfield")) \
-        .stdout(readable(4, 9, "Last Exit to Springfield")) \
-        .exit()
+    output = \
+        cs50.run(f"python3 {SCRIPT_NAME}") \
+            .stdin(unreadable(4, 9, "Last Exit to Springfield")) \
+            .stdout()
+    if readable(4, 9, "Last Exit to Springfield") != output.rstrip():
+        raise cs50.Mismatch(readable(4, 9, "Last Exit to Springfield"), output.rstrip())
