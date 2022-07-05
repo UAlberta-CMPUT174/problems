@@ -32,7 +32,7 @@ def test_empty():
     """Test Passed For Zero Input"""
     output = \
         cs50.run(f"python3 {SCRIPT_NAME}") \
-            .stdin("0") \
+            .stdin("") \
             .stdout()
     if not any(output == correct_output for correct_output in ["Mmm... ", "Mmm..."] ):
         raise cs50.Failure(f"Expected 'Mmm... ' or 'Mmm...', Got {output}")
