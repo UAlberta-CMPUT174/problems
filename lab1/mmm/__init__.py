@@ -11,7 +11,7 @@ def exists():
 
 @cs50.check(exists)
 def test_space():
-    """Test Passed For Negative Input"""
+    """Test Passed For Food Containing Space"""
     cs50.run(f"python3 {SCRIPT_NAME}") \
         .stdin("ice cream") \
         .stdout("Mmm... ice cream!") \
@@ -20,7 +20,7 @@ def test_space():
 
 @cs50.check(exists)
 def test_popcorn():
-    """Test Passed For Positive Input"""
+    """Test Passed For Popcorn"""
     cs50.run(f"python3 {SCRIPT_NAME}") \
         .stdin("popcorn") \
         .stdout("Mmm... popcorn!") \
@@ -29,7 +29,7 @@ def test_popcorn():
 
 @cs50.check(exists)
 def test_empty():
-    """Test Passed For Zero Input"""
+    """Test Passed For Emoty Input"""
     output = \
         cs50.run(f"python3 {SCRIPT_NAME}") \
             .stdin("") \

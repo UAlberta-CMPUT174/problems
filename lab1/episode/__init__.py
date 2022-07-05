@@ -1,36 +1,47 @@
 import check50 as cs50
 
 
-SCRIPT_NAME = "temperature.py"
+SCRIPT_NAME = "episode.py"
+
+
+def unreadable(season, episode, name):
+    """Given a season, episode, and name, returns the unreadable formatted string"""
+    return f"S{season}_E{episode}_{name}"
+
+
+def readable(season, episode, name):
+    """Given a season, episode, and name, returns the readable formatted string"""
+    return f"Season {season}, Episode {episode}: {name} (The Simpsons)"
+
 
 @cs50.check()
 def exists():
-    """temperature.py Exists"""
+    """episode.py Exists"""
     cs50.exists(SCRIPT_NAME)
 
 
 @cs50.check(exists)
-def test_negative():
-    """Test Passed For Negative Input"""
+def test_one():
+    """Test Passed For Test One"""
     cs50.run(f"python3 {SCRIPT_NAME}") \
-        .stdin("-30") \
-        .stdout("-30 degrees in Canada would be -22 degrees in Springfield. D'oh!") \
+        .stdin(unreadable(18, 7, "Fatzcarraldo")) \
+        .stdout(readable(18, 7, "Fatzcarraldo")) \
         .exit()
 
 
 @cs50.check(exists)
-def test_positive():
-    """Test Passed For Positive Input"""
+def test_two():
+    """Test Passed For Test Two"""
     cs50.run(f"python3 {SCRIPT_NAME}") \
-        .stdin("30") \
-        .stdout("30 degrees in Canada would be 86 degrees in Springfield. D'oh!") \
+        .stdin(unreadable(8, 17, "Life on Fast Lane")) \
+        .stdout(readable(8, 17, "Life on Fast Lane")) \
         .exit()
 
 
 @cs50.check(exists)
-def test_zero():
-    """Test Passed For Zero Input"""
+def test_three():
+    """Test Passed For Test Three"""
     cs50.run(f"python3 {SCRIPT_NAME}") \
-        .stdin("0") \
-        .stdout("0 degrees in Canada would be 32 degrees in Springfield. D'oh!") \
+        .stdin(unreadable(4, 9, "Last Exit to Springfield")) \
+        .stdout(readable(4, 9, "Last Exit to Springfield")) \
         .exit()
