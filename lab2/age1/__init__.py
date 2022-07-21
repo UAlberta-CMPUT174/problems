@@ -22,7 +22,7 @@ def test_samwise():
 @cs50.check(exists)
 def test_bilbo():
     """Bilbo is older than Frodo"""
-    cs50.run("python3 age1.py") \
+    cs50.run(f"python3 {SCRIPT_NAME}") \
         .stdin("Bilbo") \
         .stdin("129") \
         .stdout("Bilbo is 129 years old, and they are older than Frodo.\n") \
@@ -32,7 +32,7 @@ def test_bilbo():
 @cs50.check(exists)
 def test_frodo():
     """Frodo is of the same age as Frodo"""
-    cs50.run("python3 age1.py") \
+    cs50.run(f"python3 {SCRIPT_NAME}") \
         .stdin("Frodo") \
         .stdin("51") \
         .stdout("Frodo is 51 years old, and they are of the same age as Frodo.\n") \
