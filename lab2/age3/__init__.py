@@ -5,7 +5,7 @@ SCRIPT_NAME = "age3.py"
 
 @cs50.check()
 def exists():
-    """age1.py exists"""
+    """age3.py exists"""
     cs50.exists(SCRIPT_NAME)
 
 
