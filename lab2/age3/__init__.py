@@ -1,7 +1,7 @@
 import check50 as cs50
 
 
-SCRIPT_NAME = "age1.py"
+SCRIPT_NAME = "age3.py"
 
 @cs50.check()
 def exists():
@@ -10,30 +10,40 @@ def exists():
 
 
 @cs50.check(exists)
-def test_samwise():
-    """Samwise is younger than Frodo"""
+def test_eowyn():
+    """Eowyn is younger than Arwen, Gollum, Frodo, Pippin."""
     cs50.run(f"python3 {SCRIPT_NAME}") \
-        .stdin("Samwise") \
-        .stdin("39") \
-        .stdout("Samwise is 39 years old, and they are younger than Frodo.\n") \
+        .stdin("Eowyn") \
+        .stdin("24") \
+        .stdout("Eowyn is 24 years old, and they are younger than Arwen, Gollum, Frodo, Pippin.") \
         .exit()
 
 
 @cs50.check(exists)
 def test_bilbo():
-    """Bilbo is older than Frodo"""
-    cs50.run("python3 age1.py") \
+    """Bilbo is older than Frodo and Pippin and younder than Arwen and Gollum."""
+    cs50.run(f"python3 {SCRIPT_NAME}") \
         .stdin("Bilbo") \
         .stdin("129") \
-        .stdout("Bilbo is 129 years old, and they are older than Frodo.\n") \
+        .stdout("Bilbo is 129 years old, and they are older than Frodo, Pippin.\nBilbo is 129 years old, and they are younger than Arwen, Gollum.") \
         .exit()
 
 
 @cs50.check(exists)
-def test_frodo():
-    """Frodo is of the same age as Frodo"""
-    cs50.run("python3 age1.py") \
-        .stdin("Frodo") \
-        .stdin("51") \
-        .stdout("Frodo is 51 years old, and they are of the same age as Frodo.\n") \
+def test_galadriel():
+    """Galadriel is older than Arwen, Gollum, Frodo, Pippin."""
+    cs50.run(f"python3 {SCRIPT_NAME}") \
+        .stdin("Galadriel") \
+        .stdin("7000") \
+        .stdout("Galadriel is 7000 years old, and they are older than Arwen, Gollum, Frodo, Pippin.") \
+        .exit()
+
+
+@cs50.check(exists)
+def test_invalid():
+    """Ages Cannot Be Negative"""
+    cs50.run(f"python3 {SCRIPT_NAME}") \
+        .stdin("Foo") \
+        .stdin("-1") \
+        .stdout("Invalid age.") \
         .exit()
