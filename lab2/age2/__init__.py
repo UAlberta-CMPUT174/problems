@@ -11,7 +11,7 @@ def exists():
 
 @cs50.check(exists)
 def test_samwise():
-    """Samwise is younger than Frodo"""
+    """Samwise is younger than Frodo and Gollum"""
     cs50.run(f"python3 {SCRIPT_NAME}") \
         .stdin("Samwise") \
         .stdin("39") \
@@ -21,19 +21,19 @@ def test_samwise():
 
 @cs50.check(exists)
 def test_bilbo():
-    """Bilbo is older than Frodo"""
+    """Bilbo is older than Frodo but younger than Gollum"""
     cs50.run("python3 age1.py") \
         .stdin("Bilbo") \
         .stdin("129") \
-        .stdout("Bilbo is 129 years old, and they are older than Frodo.\n") \
+        .stdout("Bilbo is 129 years old, and they are older than Frodo but younger than Gollum.") \
         .exit()
 
 
 @cs50.check(exists)
-def test_frodo():
-    """Frodo is of the same age as Frodo"""
+def test_legolas():
+    """Legolas is older than both Gollum and Frodo"""
     cs50.run("python3 age1.py") \
         .stdin("Frodo") \
         .stdin("51") \
-        .stdout("Frodo is 51 years old, and they are of the same age as Frodo.\n") \
+        .stdout("Legolas is 2931 years old, and they are older than Gollum and Frodo.") \
         .exit()
