@@ -33,7 +33,7 @@ def test_bilbo():
 def test_legolas():
     """Legolas is older than both Gollum and Frodo"""
     cs50.run(f"python3 {SCRIPT_NAME}") \
-        .stdin("Frodo") \
-        .stdin("51") \
+        .stdin("Legolas") \
+        .stdin("2931") \
         .stdout("Legolas is 2931 years old, and they are older than Gollum and Frodo.") \
         .exit()
