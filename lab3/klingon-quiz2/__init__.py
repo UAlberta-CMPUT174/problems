@@ -1,11 +1,11 @@
 import check50 as cs50
 
 
-SCRIPT_NAME = "klingon-quiz1.py"
+SCRIPT_NAME = "klingon-quiz2.py"
 
 @cs50.check()
 def exists():
-    """klingon-quiz1.py exists"""
+    """klingon-quiz2.py exists"""
     cs50.exists(SCRIPT_NAME)
 
 
