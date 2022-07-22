@@ -11,8 +11,17 @@ def exists():
 
 @cs50.check(exists)
 def test_correct():
-    """Computer is De'wI' in Klingon"""
+    """Correct, Computer is De'wI' in Klingon"""
     cs50.run(f"python3 {SCRIPT_NAME}") \
         .stdin("De'wI'") \
         .stdout("Correct!") \
+        .exit()
+
+
+@cs50.check(exists)
+def test_incorrect():
+    """Sorry, Computer is De'wI' in Klingon"""
+    cs50.run(f"python3 {SCRIPT_NAME}") \
+        .stdin("Baz") \
+        .stdout("Sorry, the correct answer is De'wI'.") \
         .exit()
