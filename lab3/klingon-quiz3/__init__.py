@@ -14,5 +14,4 @@ def exists():
 @cs50.check(exists)
 def noun_incorrect_3():
     """Incorrect: The Answer Is batlh"""
-    output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("n").stdin("gh").stdin("ghighi").stdin("ghighi").stdin("ghighi").stdout()
-    print("ASDASDASDSADSAD", output)
+    output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("n").stdin("gh").stdin("ghighi").stdin("ghighi").stdin("ghighi").stdout("asdasd").exit()
