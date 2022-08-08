@@ -18,9 +18,9 @@ def noun_incorrect_3():
         .stdin("n") \
         .stdin("gh") \
         .stdin("ghighi") \
-        .stdout("How do you translate necklace to Klingon? You have 2 attempts left.\nHint: g___h") \
+        .stdout("How do you translate necklace to Klingon? You have 2 attempts left.\nHint: g___h\n> ") \
         .stdin("ghighi") \
-        .stdout("Sorry, you're wrong!\nHow do you translate necklace to Klingon?\nYou have 1 attempts left.\nHint: g___h") \
+        .stdout("Sorry, you're wrong!\nHow do you translate necklace to Klingon?\nYou have 1 attempts left.\nHint: g___h\n> ") \
         .stdin("ghighi") \
         .stdout("Sorry, you're wrong!\nThe correct answer was ghIgh.") \
         .exit()
