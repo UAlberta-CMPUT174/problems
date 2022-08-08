@@ -10,7 +10,7 @@ def exists():
 
 
 @cs50.check(exists)
-def test_stan():
+def test_uppercase_and_space():
     """Correct: The Secret Message Is: 'STAN IS NOT WHAT HE SEEMS.'"""
     cs50.run(f"python3 {SCRIPT_NAME}") \
         .stdin("VWDQ LV QRW ZKDW KH VHHPV.") \
@@ -19,7 +19,7 @@ def test_stan():
 
 
 @cs50.check(exists)
-def test_incorrect():
+def test_lowercase_and_symbols():
     """Correct: The Secret Message Is 'Python is fun! :-)'"""
     output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("Sbwkrq lv ixq! :-)").stdout()
     if "Python is fun! :-)" != output.rstrip():
