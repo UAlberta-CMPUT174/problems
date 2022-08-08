@@ -20,11 +20,12 @@ def noun_incorrect_3():
     if "How do you translate necklace to Klingon? You have 2 attempts left.\nHint: g___h\n>" != attempt_1.rstrip():
         raise cs50.Mismatch("How do you translate necklace to Klingon? You have 2 attempts left.\nHint: g___h\n>", attempt_1.rstrip())
 
-        """
-        .stdout("How do you translate necklace to Klingon? You have 2 attempts left.\nHint: g___h\n> ") \
-        .stdin("ghighi") \
-        .stdout("Sorry, you're wrong!\nHow do you translate necklace to Klingon?\nYou have 1 attempts left.\nHint: g___h\n> ") \
-        .stdin("ghighi") \
-        .stdout("Sorry, you're wrong!\nThe correct answer was ghIgh.") \
-        .exit()
-        """
+    attempt_2 = attempt_1.stdin("ghighi").stdout()
+    if "How do you translate necklace to Klingon? You have 2 attempts left.\nHint: g___h\n>" != attempt_1.rstrip():
+        raise cs50.Mismatch("How do you translate necklace to Klingon? You have 1 attempts left.\nHint: g___h\n>", attempt_2.rstrip())
+    
+    attempt_3 =attempt_2.stdin("ghighi").stdout()
+    if "Sorry, you're wrong!\nThe correct answer was ghIgh." != attempt_3.rstrip():
+        raise cs50.Mismatch("How do you translate necklace to Klingon? You have 1 attempts left.\nHint: g___h\n>", attempt_2.rstrip())
+    
+    attempt_3.exit()
