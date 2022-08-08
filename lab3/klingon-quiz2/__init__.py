@@ -3,6 +3,8 @@ import check50 as cs50
 
 SCRIPT_NAME = "klingon-quiz2.py"
 
+"b, ch, D, gh, H, j, l, m, n, p, q, Q, r, S, t, v, w, y,"
+
 @cs50.check()
 def exists():
     """klingon-quiz2.py exists"""
@@ -10,9 +12,11 @@ def exists():
 
 
 @cs50.check(exists)
-def test_correct():
-    """Correct, Computer is De'wI' in Klingon"""
+def test_noun_incorrect():
+    """The Correct Answer Is batlh"""
     cs50.run(f"python3 {SCRIPT_NAME}") \
-        .stdin("De'wI'") \
-        .stdout("Correct!") \
+        .stdin("n") \
+        .stdin("b") \
+        .stdin("bal") \
+        .stdout("Sorry, the correct answer is batlh.") \
         .exit()
