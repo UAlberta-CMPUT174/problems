@@ -10,8 +10,7 @@ def exists():
     """klingon-quiz3.py exists"""
     cs50.exists(SCRIPT_NAME)
 
-x = """
-How do you translate necklace to Klingon? You have 2 attempts left.
+x = """How do you translate necklace to Klingon? You have 2 attempts left.
 Hint: g___h
 > 
 """
