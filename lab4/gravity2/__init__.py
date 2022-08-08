@@ -1,64 +1,26 @@
 import check50 as cs50
 
 
-SCRIPT_NAME = "klingon-quiz2.py"
+SCRIPT_NAME = "gravity2.py"
 
 @cs50.check()
 def exists():
-    """klingon-quiz2.py exists"""
+    """gravity2.py exists"""
     cs50.exists(SCRIPT_NAME)
 
 
 @cs50.check(exists)
-def test_noun_incorrect():
-    """Incorrect: The Answer Is batlh"""
+def test_uppercase_and_space():
+    """Correct: The Secret Message Is: 'STAN IS NOT WHAT HE SEEMS.'"""
     cs50.run(f"python3 {SCRIPT_NAME}") \
-        .stdin("n") \
-        .stdin("b") \
-        .stdin("bal") \
-        .stdout("Sorry, the correct answer is batlh.") \
+        .stdin("VWDQ LV QRW ZKDW KH VHHPV.") \
+        .stdout("STAN IS NOT WHAT HE SEEMS.") \
         .exit()
 
 
 @cs50.check(exists)
-def test_noun_correct():
-    """Correct: The Answer Is ghIgh!"""
-    cs50.run(f"python3 {SCRIPT_NAME}") \
-        .stdin("n") \
-        .stdin("gh") \
-        .stdin("ghIgh") \
-        .stdout("Correct!") \
-        .exit()
-
-
-@cs50.check(exists)
-def test_verb_incorrect():
-    """Incorrect: The Answer Is Qochbe"""
-    cs50.run(f"python3 {SCRIPT_NAME}") \
-        .stdin("v") \
-        .stdin("m") \
-        .stdin("mevil") \
-        .stdout("Sorry, the correct answer is mIgh.") \
-        .exit()
-
-
-@cs50.check(exists)
-def test_verb_correct():
-    """Correct: The Answer Is Qochbe'!"""
-    cs50.run(f"python3 {SCRIPT_NAME}") \
-        .stdin("v") \
-        .stdin("Q") \
-        .stdin("Qochbe'") \
-        .stdout("Correct!") \
-        .exit()
-
-
-@cs50.check(exists)
-def test_capitalization():
-    """Incorrect: The Answer Is Qochbe', Not qochbe'"""
-    cs50.run(f"python3 {SCRIPT_NAME}") \
-        .stdin("v") \
-        .stdin("Q") \
-        .stdin("qochbe'") \
-        .stdout("Sorry, the correct answer is Qochbe'.") \
-        .exit()
+def test_lowercase_and_symbols():
+    """Correct: The Secret Message Is 'Python is fun! :-)'"""
+    output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("Sbwkrq lv ixq! :-)").stdout()
+    if "Python is fun! :-)" != output.rstrip():
+        raise cs50.Mismatch("Python is fun! :-)", output.rstrip())
