@@ -13,7 +13,7 @@ def exists():
 x = """How do you translate necklace to Klingon? You have 2 attempts left.
 Hint: g___h
 > 
-"""
+\n"""
 
 @cs50.check(exists)
 def noun_incorrect_3():
