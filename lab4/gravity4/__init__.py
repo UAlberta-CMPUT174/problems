@@ -36,8 +36,16 @@ def exists():
 
 
 @cs50.check(exists)
-def test_a1z26():
-    """Correct: The Secret Message Is, 'PYTHON IS FUN!'"""
+def test_one():
+    """Correct: The Secret Message Is, 'THE MAN DOWNSTAIRS IS VERY CLEVER'"""
     output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("4-16-19 11-23-10 20-9-1-10-5-4-23-15-6-5 15-5 2-19-6-25 21-12-19-2-19-6").stdout()
+    if TEST_ONE_OUTPUT.lstrip().rstrip() != output.rstrip():
+        raise cs50.Mismatch(TEST_ONE_OUTPUT.lstrip().rstrip(), output.rstrip())
+
+
+@cs50.check(exists)
+def test_two():
+    """Correct: The Secret Message Is, 'PYTHON IS FUN!'"""
+    output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("19-2-23-11-18-17 12-22 9-24-17!").stdout()
     if TEST_ONE_OUTPUT.lstrip().rstrip() != output.rstrip():
         raise cs50.Mismatch(TEST_ONE_OUTPUT.lstrip().rstrip(), output.rstrip())
