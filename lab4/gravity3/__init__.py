@@ -25,4 +25,3 @@ def test_caesar():
     correct_output = "Let's try all the methods we have:\nCaesar cipher: STAN IS NOT WHAT HE SEEMS.\nAtbash cipher: EDWJ OE JID APWD PS ESSKE.\nA1Z26 cipher: VWDQ LV QRW ZKDW KH VHHPV."
     if correct_output != output.rstrip():
         raise cs50.Mismatch(correct_output, output.rstrip())
-
