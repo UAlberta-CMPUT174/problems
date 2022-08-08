@@ -21,7 +21,6 @@ def test_stan():
 @cs50.check(exists)
 def test_incorrect():
     """Correct: The Secret Message Is 'Python is fun! :-)'"""
-    cs50.run(f"python3 {SCRIPT_NAME}") \
-        .stdin("Sbwkrq lv ixq! :-)") \
-        .stdout("Python is fun! :-)") \
-        .exit()
+    output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("Sbwkrq lv ixq! :-)").stdout()
+    if "Python is fun! :-)" != output.rstrip():
+        raise cs50.Mismatch("Python is fun! :-)", output.rstrip())
