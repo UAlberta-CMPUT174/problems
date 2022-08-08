@@ -11,7 +11,7 @@ def exists():
 
 @cs50.check(exists)
 def test_uppercase_and_space():
-    """Correct: The Secret Message Is: 'STAN IS NOT WHAT HE SEEMS.'"""
+    """Correct: The Secret Message Is, 'STAN IS NOT WHAT HE SEEMS.'"""
     cs50.run(f"python3 {SCRIPT_NAME}") \
         .stdin("VWDQ LV QRW ZKDW KH VHHPV.") \
         .stdout("STAN IS NOT WHAT HE SEEMS.") \
