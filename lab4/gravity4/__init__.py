@@ -4,6 +4,7 @@ import check50 as cs50
 SCRIPT_NAME = "gravity4.py"
 
 TEST_ONE_OUTPUT = """
+Let's try all the methods we have:
 Caesar cipher: 4-16-19 11-23-10 20-9-1-10-5-4-23-15-6-5 15-5 2-19-6-25 21-12-19-2-19-6
 Atbash cipher: 4-16-19 11-23-10 20-9-1-10-5-4-23-15-6-5 15-5 2-19-6-25 21-12-19-2-19-6
 Combined: 1) Caesar; 2) Atbash cipher: 4-16-19 11-23-10 20-9-1-10-5-4-23-15-6-5 15-5 2-19-6-25 21-12-19-2-19-6
