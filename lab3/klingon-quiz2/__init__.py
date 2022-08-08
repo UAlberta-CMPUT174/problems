@@ -3,8 +3,6 @@ import check50 as cs50
 
 SCRIPT_NAME = "klingon-quiz2.py"
 
-"b, ch, D, gh, H, j, l, m, n, p, q, Q, r, S, t, v, w, y,"
-
 @cs50.check()
 def exists():
     """klingon-quiz2.py exists"""
