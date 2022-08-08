@@ -47,5 +47,5 @@ def test_one():
 def test_two():
     """Correct: The Secret Message Is, 'PYTHON IS FUN!'"""
     output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("19-2-23-11-18-17 12-22 9-24-17!").stdout()
-    if TEST_ONE_OUTPUT.lstrip().rstrip() != output.rstrip():
-        raise cs50.Mismatch(TEST_ONE_OUTPUT.lstrip().rstrip(), output.rstrip())
+    if TEST_TWO_OUTPUT.lstrip().rstrip() != output.rstrip():
+        raise cs50.Mismatch(TEST_TWO_OUTPUT.lstrip().rstrip(), output.rstrip())
