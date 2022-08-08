@@ -20,3 +20,13 @@ def test_noun_incorrect():
         .stdin("bal") \
         .stdout("Sorry, the correct answer is batlh.") \
         .exit()
+
+@cs50.check(exists)
+def test_noun_correct():
+    """Correct: The Answer Is ghIgh!"""
+    cs50.run(f"python3 {SCRIPT_NAME}") \
+        .stdin("n") \
+        .stdin("gh") \
+        .stdin("ghIgh") \
+        .stdout("Correct!") \
+        .exit()
