@@ -44,6 +44,14 @@ def noun_correct():
 
 
 @cs50.check(exists)
+def verb_incorrect_3():
+    """The Script Terminates And Reveals The Correct Verb After 3 Incorrect Verbs"""
+    output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("v").stdin("Q").stdin("quche").stdin("quche").stdin("quche").stdout()
+    if "Sorry, you're wrong!\nThe correct answer was Qochbe'." != output.rstrip():
+        raise cs50.Mismatch("Sorry, you're wrong!\nThe correct answer was ghIgh.", output.rstrip())
+
+
+@cs50.check(exists)
 def case_sensitive():
     """The Script Correctly Detects Letter Case"""
     output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("n").stdin("gh").stdin("ghigh").stdin("ghigh").stdin("ghigh").stdout()
