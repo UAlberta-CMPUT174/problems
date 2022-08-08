@@ -39,7 +39,7 @@ def noun_incorrect_1():
 def noun_correct():
     """The Script Accepts A Correct Noun On The First Try"""
     output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("n").stdin("gh").stdin("ghIgh").stdout()
-    if "Correct!" != output.rstrip():
+    if "Correct!\nThe correct answer was ghIgh." != output.rstrip():
         raise cs50.Mismatch("Correct!", output.rstrip())
 
 
