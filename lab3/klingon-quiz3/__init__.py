@@ -10,8 +10,11 @@ def exists():
     """klingon-quiz3.py exists"""
     cs50.exists(SCRIPT_NAME)
 
+x = """How do you translate necklace to Klingon? You have 2 attempts left.
+Hint: g___h
+> """
 
 @cs50.check(exists)
 def noun_incorrect_3():
     """Incorrect: The Answer Is batlh"""
-    output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("n").stdin("gh").stdin("ghighi").stdout("asdasd").stdin("ghighi").stdout("asdasd").stdin("ghighi").stdout("asdasd").exit()
+    output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("n").stdin("gh").stdin("ghighi").stdout(x).stdin("ghighi").stdout("asdasd").stdin("ghighi").stdout("asdasd").exit()
