@@ -78,4 +78,12 @@ def case_sensitive():
     """The Script Correctly Detects Letter Case"""
     output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("n").stdin("gh").stdin("ghigh").stdin("ghigh").stdin("ghigh").stdout()
     if "Sorry, you're wrong!\nThe correct answer was ghIgh." != output.rstrip():
+
+
+@cs50.check(exists)
+def invalid_choice():
+    """The Script Asks Again If The user Enters Anything Besides 'n' or 'v' For Selecting Verb Or Noun"""
+    output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("g").stdout("Please enter either 'n' or 'v'.").stdin("gh").stdin("ghigh").stdin("ghigh").stdin("ghigh").stdout()
+    if "Sorry, you're wrong!\nThe correct answer was ghIgh." != output.rstrip():
         raise cs50.Mismatch("Sorry, you're wrong!\nThe correct answer was ghIgh.", output.rstrip())
+raise cs50.Mismatch("Sorry, you're wrong!\nThe correct answer was ghIgh.", output.rstrip())
