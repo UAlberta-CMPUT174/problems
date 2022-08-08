@@ -10,14 +10,34 @@ def exists():
     """klingon-quiz3.py exists"""
     cs50.exists(SCRIPT_NAME)
 
-x = """How do you translate necklace to Klingon? You have 2 attempts left.
-Hint: g___h
-> """
 
 @cs50.check(exists)
 def noun_incorrect_3():
-    """Incorrect: The Answer Is batlh"""
+    """The Script Terminates And Reveals The Correct Answer After 3 Incorrect Guesses"""
     output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("n").stdin("gh").stdin("ghighi").stdin("ghighi").stdin("ghighi").stdout()
     if "Sorry, you're wrong!\nThe correct answer was ghIgh." != output.rstrip():
         raise cs50.Mismatch("Sorry, you're wrong!\nThe correct answer was ghIgh.", output.rstrip())
     
+
+@cs50.check(exists)
+def noun_incorrect_2():
+    """The Script Terminates And Reveals The Correct Answer After 3 Incorrect Guesses"""
+    output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("n").stdin("gh").stdin("ghighi").stdin("ghighi").stdin("ghIgh").stdout()
+    if "Sorry, you're wrong!\nThe correct answer was ghIgh." != output.rstrip():
+        raise cs50.Mismatch("Sorry, you're wrong!\nThe correct answer was ghIgh.", output.rstrip())
+    
+
+@cs50.check(exists)
+def noun_incorrect_1():
+    """The Script Terminates And Reveals The Correct Answer After 3 Incorrect Guesses"""
+    output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("n").stdin("gh").stdin("ghighi").stdin("ghighi").stdin("ghighi").stdout()
+    if "Sorry, you're wrong!\nThe correct answer was ghIgh." != output.rstrip():
+        raise cs50.Mismatch("Sorry, you're wrong!\nThe correct answer was ghIgh.", output.rstrip())
+    
+
+@cs50.check(exists)
+def noun_correct():
+    """The Script Terminates And Reveals The Correct Answer After 3 Incorrect Guesses"""
+    output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("n").stdin("gh").stdin("ghighi").stdin("ghighi").stdin("ghighi").stdout()
+    if "Sorry, you're wrong!\nThe correct answer was ghIgh." != output.rstrip():
+        raise cs50.Mismatch("Sorry, you're wrong!\nThe correct answer was ghIgh.", output.rstrip())
