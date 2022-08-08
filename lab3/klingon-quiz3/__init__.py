@@ -10,7 +10,9 @@ def exists():
     """klingon-quiz3.py exists"""
     cs50.exists(SCRIPT_NAME)
 
-x = "How do you translate necklace to Klingon? You have 2 attempts left.\nHint: g___h\n> \0"
+x = """How do you translate necklace to Klingon? You have 2 attempts left.
+Hint: g___h
+> \0"""
 
 @cs50.check(exists)
 def noun_incorrect_3():
