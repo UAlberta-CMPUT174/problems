@@ -16,7 +16,6 @@ def noun_incorrect_3():
     """Incorrect: The Answer Is batlh"""
     attempt_1 = cs50.run(f"python3 {SCRIPT_NAME}").stdin("n").stdin("gh").stdin("ghighi").stdout()
 
-    print(attempt_1.rstrip())
     if "How do you translate necklace to Klingon? You have 2 attempts left.\nHint: g___h\n>" != attempt_1.rstrip():
         raise cs50.Mismatch("How do you translate necklace to Klingon? You have 2 attempts left.\nHint: g___h\n>", attempt_1.rstrip())
 
