@@ -18,4 +18,6 @@ Hint: g___h
 def noun_incorrect_3():
     """Incorrect: The Answer Is batlh"""
     output = cs50.run(f"python3 {SCRIPT_NAME}").stdin("n").stdin("gh").stdin("ghighi").stdin("ghighi").stdin("ghighi").stdout()
-    print(output)
+    if "Sorry, you're wrong!\nThe correct answer was ghIgh." != output.rstrip():
+        raise cs50.Mismatch("Sorry, you're wrong!\nThe correct answer was ghIgh.", output.rstrip())
+    
